@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/***** dice animation */
+
+@import url("https://fonts.googleapis.com/css?family=Dosis|Roboto");
+@keyframes changeOrder {
+    from {
+        z-index: 6;
+    }
+    to {
+        z-index: 1;
+    }
+}
+
+@-webkit-keyframes changeOrder {
+    from {
+        z-index: 6;
+    }
+    to {
+        z-index: 1;
+    }
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(76, 76, 186, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.button1 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid#010c17;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #010c17;
+    text-align: center;
+    transition: all 0.2s;
+    left: 47%;
+    top: 5%;
+    position: relative;
+    cursor: pointer;
+}
+
+#game #board {
+    width: 100%;
+    max-width: 650px;
+    border: 3px solid #010c17;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background: white;
+    margin-top: 2.5rem;
+    box-shadow: 0 1.5em 0.5em -1em rgba(0, 0, 0, 0.25);
+}
+
+#game #board .tile {
+    width: 10%;
+    position: relative;
+    height: 0;
+    padding-top: 10%;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background: #cee8d7;
+}
+
+.player-caption {
+    position: relative;
+    top: 30%;
+    color: white;
+    left: 43%;
+    padding: 10px;
+    width: 30%;
+}
+
+#game #board .tile-left {
+    float: left;
+}
+
+#game #board .tile-right {
+    float: right;
+}
+
+#cell-container .tile::before {
+    content: attr(data-index);
+    position: absolute;
+    top: 0rem;
+    left: 0.15rem;
+    font-size: 0.66rem;
+}
+
+#game #board .tile.tile6::before, #game #board .tile.tile12::before, #game #board .tile.tile18::before, #game #board .tile.tile22::before, #game #board .tile.tile23::before, #game #board .tile.tile28::before, #game #board .tile.tile30::before, #game #board .tile.tile34::before, #game #board .tile.tile36::before, #game #board .tile.tile39::before, #game #board .tile.tile55::before, #game #board .tile.tile79::before {
+    left: auto;
+    right: 0.15rem;
+}
+
+#game #board .tile.tile52::before {
+    top: auto;
+    bottom: 0rem;
+}
+
+#game #board .tile.tile76::before {
+    left: 0.6rem;
+}
+
+#game #board .tile1 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile91 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile10 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile11 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile2 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile92 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile20 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile21 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile3 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile93 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile30 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile31 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile4 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile94 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile40 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile41 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile5 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile95 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile50 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile51 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile6 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile96 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile60 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile61 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile7 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile97 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile70 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile71 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile8 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile98 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile80 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile81 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile9 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile99 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile90 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile91 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile10 {
+    border-bottom: 1px solid transparent;
+}
+
+#game #board .tile100 {
+    border-top: 1px solid transparent;
+}
+
+#game #board .tile100 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile101 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#game #board .tile1, #game #board .tile15, #game #board .tile24, #game #board .tile38, #game #board .tile49, #game #board .tile55, #game #board .tile65, #game #board .tile76, #game #board .tile86, #game #board .tile94 {
+    background: #fadbe5;
+}
+
+#game #board .tile2, #game #board .tile16, #game #board .tile23, #game #board .tile35, #game #board .tile42, #game #board .tile56, #game #board .tile64, #game #board .tile79, #game #board .tile87, #game #board .tile93 {
+    background: #ecf3ff;
+}
+
+#game #board .tile3, #game #board .tile18, #game #board .tile26, #game #board .tile33, #game #board .tile41, #game #board .tile58, #game #board .tile68, #game #board .tile78, #game #board .tile81, #game #board .tile96 {
+    background: #feeadb;
+}
+
+#game #board .tile4, #game #board .tile11, #game #board .tile29, #game #board .tile40, #game #board .tile47, #game #board .tile51, #game #board .tile61, #game #board .tile77, #game #board .tile88, #game #board .tile99 {
+    background: #eee2ef;
+}
+
+#game #board .tile5, #game #board .tile19, #game #board .tile27, #game #board .tile32, #game #board .tile44, #game #board .tile59, #game #board .tile69, #game #board .tile80, #game #board .tile89, #game #board .tile97 {
+    background: #bbe7f8;
+}
+
+#game #board .tile6, #game #board .tile20, #game #board .tile28, #game #board .tile31, #game #board .tile45, #game #board .tile60, #game #board .tile70, #game #board .tile75, #game #board .tile85, #game #board .tile98 {
+    background: #fffcdb;
+}
+
+#game #board .tile7, #game #board .tile13, #game #board .tile21, #game #board .tile36, #game #board .tile50, #game #board .tile53, #game #board .tile63, #game #board .tile74, #game #board .tile84, #game #board .tile91 {
+    background: #d2effe;
+}
+
+#game #board .tile8, #game #board .tile12, #game #board .tile30, #game #board .tile39, #game #board .tile46, #game #board .tile52, #game #board .tile62, #game #board .tile73, #game #board .tile90, #game #board .tile100 {
+    background: #f3ddb2;
+}
+
+#game #board .tile9, #game #board .tile14, #game #board .tile22, #game #board .tile37, #game #board .tile48, #game #board .tile54, #game #board .tile66, #game #board .tile72, #game #board .tile83, #game #board .tile96 {
+    background: #fac5b8;
+}
+
+svg#snakeladders {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+svg#snakeladders g.ladders-big {
+    stroke: #8B4513;
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+svg#snakeladders g.ladders-small {
+    stroke: #8B4513;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+}
+
+svg .snake {
+    stroke: none;
+}
+
+svg .eye {
+    fill: black;
+    stroke: white;
+    stroke-width: -2;
+}
+
+svg.piece {
+    position: absolute;
+    width: 8%;
+    bottom: 0;
+    left: 0;
+    transform: translate(-2%, -2%);
+    -webkit-transform: translate(-2%, -2%);
+    transition: bottom 0.5s, left 0.5s;
+}
+
+svg.piece g {
+    fill: #f55;
+    stroke-width: 4;
+    stroke: rgba(0, 0, 0, 0.3);
+}
+
+svg.piece#piece-player-1 {
+    transform: translate(-5%, -3%);
+    -webkit-transform: translate(-5%, -3%);
+    z-index: 44;
+}
+
+svg.piece#piece-player-1 g {
+    fill: #f55;
+}
+
+svg.piece#piece-player-2 {
+    transform: translate(40%, -40%);
+    -webkit-transform: translate(40%, -40%);
+    z-index: 41;
+}
+
+svg.piece#piece-player-2 g {
+    fill: #48c;
+}
+
+svg.piece#piece-player-3 {
+    transform: translate(42%, -7%);
+    -webkit-transform: translate(42%, -7%);
+    z-index: 43;
+}
+
+svg.piece#piece-player-3 g {
+    fill: #4a5;
+}
+
+svg.piece#piece-player-4 {
+    transform: translate(-3%, -41%);
+    -webkit-transform: translate(-3%, -41%);
+    z-index: 42;
+}
+
+svg.piece#piece-player-4 g {
+    fill: #dd5;
+}
+
+@media (max-width: 400px) {
+    #game #board .tile::before {
+        font-size: 0.4rem;
+    }
+    #game .tab::before {
+        font-size: 0.65rem;
+    }
+    #game .tab::after, #game .tab#player-info span {
+        font-size: 0.9rem;
+        height: 1.5rem;
+        line-height: 1.4rem;
+    }
+}
